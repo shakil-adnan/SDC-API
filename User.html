@@ -1,0 +1,22 @@
+<div class="row mt-12" ng-controller="userCltr">
+    <h3 class="h3" ng-hide="loded">Loading...</h3>
+    <div class="col-md-4" ng-repeat="user in users">
+        <div class="list-group">
+            <div class="list-group-item">
+                <h4><a href="/#!/NewUser/{{user.id}}">{{user.email}}</a></h4>
+                <p>
+                    Full Name: {{user.name}}</br>
+                    {{user.address.street +','+ user.address.city+','+user.address.zipcode}}
+                </p>
+            </div>
+            <div class="list-group-item">
+                <h5 class="h5 text-secondary"><b>Phone</b></h5>
+                {{user.phone}}
+            </div>
+            <div class="list-group-item">
+                <h5 class="h5 text-secondary"><b>Website</b></h5>
+                <a href="#">{{user.website}}</a>
+            </div>
+        </div>
+    </div>
+</div>

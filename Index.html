@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>
+        SDC DIU
+    </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <script src="Start.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <div class="container">
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="{{role='posts' ? active : ''}}"><a href="/#!">Comments</a></li>
+            <li role="presentation" class="{{role='users' ? active : ''}}"><a href="/#!/user">Users</a></li>
+            <li role="presentation" class="{{role='NewUser' ? active : ''}}"><a href="/#!/NewUser">Add user</a></li>
+        </ul>
+        <div ng-view>
+
+        </div>
+    </div>
+</body>
+
+</html>
